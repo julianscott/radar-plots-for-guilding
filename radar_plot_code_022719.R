@@ -1,9 +1,21 @@
+
+
 packages <- c("stargazer","devtools","tidyverse","vegan","MASS","aod","ResourceSelection","graphics",
-              "lmtest","stats","boot","dave","gridExtra","ggpubr","fmsb","indicspecies","broom","RColorBrewer","ggradar","ggrepel")
+              "lmtest","stats","boot","dave","gridExtra","ggpubr","fmsb","indicspecies","broom","RColorBrewer",
+              ,"ggrepel")
+
 # Then, check to see if each is installed, and install if not.
 if (length(setdiff(packages, rownames(installed.packages()))) > 0) {    
   install.packages(setdiff(packages, rownames(installed.packages())))  
 }
+
+# this will use devtools to install ggradar from the developers github repository
+devtools::install_github("ricardo-bion/ggradar")
+
+# and load library
+library(ggradar)
+
+# google search ggradar for more info
 
 # now, use the lapply function to load the installed libraries in the packages list 
 lapply(packages,library,character.only=TRUE)
