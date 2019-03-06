@@ -21,8 +21,7 @@ library(ggradar)
 lapply(packages,library,character.only=TRUE)
 
 setwd("C:\\Users\\jascott\\Documents\\Project\\_RMB_paper\\Veg_Data\\Analysis")
-source("GuildedFloraFunction_120517.R")
-source("other_functions.R")
+
 
 ############################
 ### bring in guild trait data
